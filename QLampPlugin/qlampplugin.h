@@ -14,7 +14,8 @@ class QLampPlugin : public QObject, public QDesignerCustomWidgetInterface
 public:
     QLampPlugin(QObject *parent = 0);
     QStringList keys() const;
-    QLamp* create(QObject *parent = 0 ,const QString &filename=QString());
+    QLamp* create(QWidget *parent = 0 ,const QString &filename=QString(),
+                  const QString &filename2=QString());
     QString name() const;
     QString group() const;
     QString toolTip() const;

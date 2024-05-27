@@ -10,11 +10,11 @@
 #include <QColor>
 #include <QtDesigner/QDesignerExportWidget>
 #include <QWidget>
-class QLamp : public QWidget, public QIconEngineV2
+class QDESIGNER_WIDGET_EXPORT QLamp : public QWidget, public QIconEngineV2
 {
     Q_OBJECT
 public:
-    QLamp(QObject *parent = 0, const QString &filename=QString(),
+    QLamp(QWidget *parent = 0, const QString &filename=QString(),
           const QString &filename2=QString());
     ~QLamp();
     virtual void paint(QPainter* painter, const QRect & rect, QIcon::Mode mode, QIcon::State state);

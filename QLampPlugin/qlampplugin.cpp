@@ -12,14 +12,16 @@ QStringList QLampPlugin::keys() const
     return QStringList()<<"*.png"<<"*.jpg";
 }
 
-QLamp* QLampPlugin::create(QObject *parent ,const QString &filename)
+QLamp* QLampPlugin::create(QWidget *parent ,const QString &filename,
+                           const QString &filename2)
 {
-    return new QLamp(parent, filename);
+    return new QLamp(parent, filename, filename2);
 }
 
 QWidget* QLampPlugin::createWidget(QWidget *parent)
 {
-    return create(parent, QString("c:/Users/user/Downloads/LED_ON.jpg"));
+    return create(parent, QString("c:/Users/user/Downloads/LED_OFF.jpg"),
+                  QString("c:/Users/user/Downloads/LED_ON.jpg"));
 }
 
 QString QLampPlugin::name() const
@@ -74,7 +76,6 @@ QString QLampPlugin::domXml() const
 {
     return "<ui language=\"c++\">\n"
             " <widget class=\"QLamp\" name=\"qLamp\">\n"
- //! [11]
             "  <property name=\"geometry\">\n"
             "   <rect>\n"
             "    <x>0</x>\n"
@@ -83,7 +84,6 @@ QString QLampPlugin::domXml() const
             "    <height>64</height>\n"
             "   </rect>\n"
             "  </property>\n"
-
             "  <property name=\"toolTip\" >\n"
             "   <string>Show images of off and on states</string>\n"
             "  </property>\n"
@@ -94,4 +94,4 @@ QString QLampPlugin::domXml() const
             "</ui>\n";
 }
 
-Q_EXPORT_PLUGIN2(qlampPlugin, QLampPlugin)
+Q_EXPORT_PLUGIN2(QLampPlugin, QLampPlugin)
