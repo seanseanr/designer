@@ -21,6 +21,7 @@ build_all:!build_pass {
 
 # install
 target.path = $$[QT_INSTALL_PLUGINS]/designer
+DESTDIR = D:/4.8.7-X86-64/plugins/designer
 sources.files = $$SOURCES $$HEADERS *.pro
 sources.path = $$[QT_INSTALL_EXAMPLES]/designer/customwidgetplugin
 INSTALLS += target sources

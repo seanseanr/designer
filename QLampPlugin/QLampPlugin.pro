@@ -8,9 +8,10 @@ QT       += core gui
 
 TARGET = QLampPlugin
 TEMPLATE = lib
-CONFIG += plugin designer
+CONFIG += designer plugin
 
-DESTDIR = $$[QT_INSTALL_PLUGINS]/designer
+#DESTDIR = $$[QT_INSTALL_PLUGINS]/designer
+DESTDIR = D:/qt/4.8.7-X86-64/plugins/designer
 
 SOURCES += qlampplugin.cpp \
     qlamp.cpp

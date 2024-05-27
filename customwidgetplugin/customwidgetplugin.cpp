@@ -85,7 +85,7 @@ QString AnalogClockPlugin::name() const
 //! [5]
 QString AnalogClockPlugin::group() const
 {
-    return "Display Widgets [Examples]";
+    return "Extensions Widgets [Examples]";
 }
 //! [5]
 
