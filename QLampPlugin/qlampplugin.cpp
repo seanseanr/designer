@@ -20,8 +20,8 @@ QLamp* QLampPlugin::create(QWidget *parent ,const QString &filename,
 
 QWidget* QLampPlugin::createWidget(QWidget *parent)
 {
-    return create(parent, QString("c:/Users/user/Downloads/LED_OFF.jpg"),
-                  QString("c:/Users/user/Downloads/LED_ON.jpg"));
+    return create(parent, QString(":/img/LED_OFF.jpg"),
+                  QString(":/img/LED_ON.jpg"));
 }
 
 QString QLampPlugin::name() const
@@ -80,8 +80,8 @@ QString QLampPlugin::domXml() const
             "   <rect>\n"
             "    <x>0</x>\n"
             "    <y>0</y>\n"
-            "    <width>64</width>\n"
-            "    <height>64</height>\n"
+            "    <width>52</width>\n"
+            "    <height>52</height>\n"
             "   </rect>\n"
             "  </property>\n"
             "  <property name=\"toolTip\" >\n"
